@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		960A391C2C31F52D00FEA223 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 960A391B2C31F52D00FEA223 /* Starscream */; };
 		967BE55E2C30AC14000087DB /* mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BE55D2C30AC14000087DB /* mobileApp.swift */; };
 		967BE5602C30AC14000087DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BE55F2C30AC14000087DB /* ContentView.swift */; };
 		967BE5622C30AC16000087DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967BE5612C30AC16000087DB /* Assets.xcassets */; };
@@ -15,6 +14,8 @@
 		967BE56F2C30AC16000087DB /* mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BE56E2C30AC16000087DB /* mobileTests.swift */; };
 		967BE5792C30AC16000087DB /* mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BE5782C30AC16000087DB /* mobileUITests.swift */; };
 		967BE57B2C30AC16000087DB /* mobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BE57A2C30AC16000087DB /* mobileUITestsLaunchTests.swift */; };
+		FE74E1C82C3322E2005051C7 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = FE74E1C72C3322E2005051C7 /* Starscream */; };
+		FE7EF8782C32E36300325CE4 /* SocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7EF8772C32E36200325CE4 /* SocketHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		967BE5742C30AC16000087DB /* mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967BE5782C30AC16000087DB /* mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobileUITests.swift; sourceTree = "<group>"; };
 		967BE57A2C30AC16000087DB /* mobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE7EF8762C32E0C900325CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE7EF8772C32E36200325CE4 /* SocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960A391C2C31F52D00FEA223 /* Starscream in Frameworks */,
+				FE74E1C82C3322E2005051C7 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +99,10 @@
 		967BE55C2C30AC14000087DB /* mobile */ = {
 			isa = PBXGroup;
 			children = (
+				FE7EF8762C32E0C900325CE4 /* Info.plist */,
 				967BE55D2C30AC14000087DB /* mobileApp.swift */,
 				967BE55F2C30AC14000087DB /* ContentView.swift */,
+				FE7EF8772C32E36200325CE4 /* SocketHandler.swift */,
 				967BE5612C30AC16000087DB /* Assets.xcassets */,
 				967BE5632C30AC16000087DB /* Preview Content */,
 			);
@@ -146,7 +151,7 @@
 			);
 			name = mobile;
 			packageProductDependencies = (
-				960A391B2C31F52D00FEA223 /* Starscream */,
+				FE74E1C72C3322E2005051C7 /* Starscream */,
 			);
 			productName = mobile;
 			productReference = 967BE55A2C30AC14000087DB /* mobile.app */;
@@ -221,7 +226,7 @@
 			);
 			mainGroup = 967BE5512C30AC14000087DB;
 			packageReferences = (
-				960A391A2C31F3F300FEA223 /* XCRemoteSwiftPackageReference "Starscream" */,
+				FE74E1C62C3322E2005051C7 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 967BE55B2C30AC14000087DB /* Products */;
 			projectDirPath = "";
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7EF8782C32E36300325CE4 /* SocketHandler.swift in Sources */,
 				967BE5602C30AC14000087DB /* ContentView.swift in Sources */,
 				967BE55E2C30AC14000087DB /* mobileApp.swift in Sources */,
 			);
@@ -430,9 +436,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile/Preview Content\"";
-				DEVELOPMENT_TEAM = DA82V2K7A3;
+				DEVELOPMENT_TEAM = RY3NVQ78HS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mobile/Info.plist;
 				INFOPLIST_KEY_NSMotionUsageDescription = "\"reading movement\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ko.mobile.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,9 +467,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile/Preview Content\"";
-				DEVELOPMENT_TEAM = DA82V2K7A3;
+				DEVELOPMENT_TEAM = RY3NVQ78HS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mobile/Info.plist;
 				INFOPLIST_KEY_NSMotionUsageDescription = "\"reading movement\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -474,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ko.mobile.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -600,9 +608,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		960A391A2C31F3F300FEA223 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+		FE74E1C62C3322E2005051C7 /* XCRemoteSwiftPackageReference "Starscream" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/daltoniam/Starscream";
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.8;
@@ -611,8 +619,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		960A391B2C31F52D00FEA223 /* Starscream */ = {
+		FE74E1C72C3322E2005051C7 /* Starscream */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = FE74E1C62C3322E2005051C7 /* XCRemoteSwiftPackageReference "Starscream" */;
 			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
